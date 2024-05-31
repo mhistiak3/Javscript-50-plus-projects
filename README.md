@@ -38,7 +38,7 @@ Here are some of the projects you'll find in this repository:
 
 1. **Project 1: To-Do List**
    - Concepts: Arrays, Function, Local Storage, CRUD Operations
-   - [Demo](https://i.ibb.co/xhjzYDF/Screenshot-2024-06-01-at-00-10-28-i-A-Todo-List.png)
+   - ![TodoList](https://i.ibb.co/xhjzYDF/Screenshot-2024-06-01-at-00-10-28-i-A-Todo-List.png)
 
 ## How to Contribute
 
