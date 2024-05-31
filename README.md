@@ -3,7 +3,7 @@
 
 Welcome to the **JavaScript 50+ Projects** repository! This repository contains a variety of JavaScript projects designed to help you learn and master JavaScript through practical examples. Whether you're a beginner or an experienced developer, you'll find projects here that can help you enhance your skills and contribute to the community.
 
-![JavaScript Banner](https://your-image-link.com/banner.jpg)
+![JavaScript Banner](https://www.canva.com/design/DAGGyzncrQ4/7iEYLIPG29DxLz6HgDAO5g/view?utm_content=DAGGyzncrQ4&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 ## Table of Contents
 
