@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iA TodoList</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/checkbox.css" />
+
     <!-- Script -->
     <script src="./app.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <section id="todo-app">
+      <header>
+        <h2>iA TodoList</h2>
+      </header>
+      <div class="container">
+        <div class="main">
+          <div class="input-form">
+            <input type="text" placeholder="Add you todo..." id="todoInput" />
+            <button class="addBtn showBtn">Add Todo</button>
+            <button class="updateBtn">Update</button>
+          </div>
+          <div class="todos">
+          
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/406cd9d646.js" crossorigin="anonymous" defer></script>
+  </body>
 </html>

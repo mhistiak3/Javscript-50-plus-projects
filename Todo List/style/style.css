@@ -1,0 +1,120 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inconsolata:wght@200..900&display=swap");
+/* variable */
+:root {
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --assets: #2dd4bf;
+  --dark-light: #64748b;
+  --white: #fff;
+  --black: #000;
+}
+
+/* preset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--primary);
+}
+#todo-app {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+header {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--white);
+  border-bottom: 1px solid var(--dark-light);
+}
+.main {
+  padding: 30px 0;
+}
+.input-form {
+  max-width: 700px;
+  margin: auto;
+  input {
+    width: 75%;
+    padding: 12px 15px;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: var(--secondary);
+    color: var(--white);
+    border: 1px solid var(--dark-light);
+    &:focus {
+      border: 1px solid var(--white);
+    }
+  }
+  button {
+    width: 20%;
+    font-size: 1.4rem;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: var(--assets);
+    color: var(--black);
+    cursor: pointer;
+  }
+}
+.updateBtn{
+  display: none;
+}
+.addBtn{
+  display: none;
+}
+.showBtn{
+  display: inline-block;
+}
+/* todos */
+.todos {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.todos > h2 {
+  color: var(--dark-light);
+  text-align: center;
+}
+.todo {
+  width: 49%;
+  margin-bottom: 20px;
+  background-color: var(--secondary);
+  display: grid;
+  grid-template-columns: 1fr 9.5fr 1.5fr;
+  padding: 20px 15px;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  position: relative;
+  color: var(--white);
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+.border-show{
+  border: 2px solid var(--assets);
+}
+.checkboxCustom {
+  margin-top: 2px;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark-light);
+}
