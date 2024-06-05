@@ -11,6 +11,7 @@ const quizArray = [
           "Hyper Tool Markup Language",
         ],
         correctAnswer: "Hyper Text Markup Language",
+        
       },
       {
         question: "What does the 'doctype' declaration do?",
