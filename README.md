@@ -46,7 +46,13 @@ Here are some of the projects you'll find in this repository:
    - Concepts: Function, Dom, Events
     ![TodoList](https://i.ibb.co/f07GLdw/Screenshot-2024-06-03-at-15-49-29-Pig-Game.png)
     
-   - [Pig Game](https://todolist-app-ia.netlify.app/)
+   - [Pig Game](https://pig-game-ia.netlify.app/)
+
+3. **Project 3: To-Do List**
+   - Concepts: Function, Dom, Events, Condition, Loop, Array
+    ![Quiz App](https://i.ibb.co/HpnLHQk/Screenshot-2024-06-05-at-16-35-58-i-A-Quiz-App.png)
+    
+   - [Quiz App Demo](https://quiz-app-ia.netlify.app/)
 
 ## How to Contribute
 
