@@ -42,17 +42,24 @@ Here are some of the projects you'll find in this repository:
 
    - [iA TodoList Demo](https://todolist-app-ia.netlify.app/)
 
-2. **Project 2: To-Do List**
+2. **Project 2: Pig Game**
    - Concepts: Function, Dom, Events
-    ![TodoList](https://i.ibb.co/f07GLdw/Screenshot-2024-06-03-at-15-49-29-Pig-Game.png)
+    ![Pig Game](https://i.ibb.co/f07GLdw/Screenshot-2024-06-03-at-15-49-29-Pig-Game.png)
     
    - [Pig Game](https://pig-game-ia.netlify.app/)
 
-3. **Project 3: To-Do List**
+3. **Project 3: Quiz App**
    - Concepts: Function, Dom, Events, Condition, Loop, Array
     ![Quiz App](https://i.ibb.co/HpnLHQk/Screenshot-2024-06-05-at-16-35-58-i-A-Quiz-App.png)
     
    - [Quiz App Demo](https://quiz-app-ia.netlify.app/)
+
+4. **Project 4: Tic Tac Toe**
+   - Concepts: Function, Dom, Events, Condition, Loop, Array Method
+    ![Tic Tac Toe](https://i.ibb.co/Kj4r5KG/Screenshot-2024-06-09-at-18-39-48-Tic-Tac-Toe-Game.png)
+    
+   - [Tic Tac Toe Demo](https://tic-tac-toe-game-ia.netlify.app/)
+
 
 ## How to Contribute
 
