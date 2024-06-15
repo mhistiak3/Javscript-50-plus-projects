@@ -24,7 +24,7 @@ function init() {
     case "/shows.html":
       displayPopulerShows();
       break;
-    case "/shows.html":
+    case "/shows":
       displayPopulerShows();
       break;
     case "/movie-details.html":
