@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBook | Find Programming Books</title>
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="bg-gradient-to-r from-sky-500 to-indigo-500 h-screen">
+      <div class="w-3/4 m-auto flex flex-col items-center h-full pt-20">
+        <a
+          href="/"
+          class="text-4xl font-semibold bg-indigo-500 px-5 py-4 text-white w-fit rounded-md"
+          >iBook</a
+        >
+        <h1 class="text-6xl my-8 font-semibold text-white">
+          Find Programming Books
+        </h1>
+        <div class="w-full flex justify-center">
+          <input
+            type="text"
+            class="text-2xl px-5 py-3 rounded-md w-3/4"
+            placeholder="search book..."
+          />
+        </div>
+        <button
+          class="mt-5 bg-indigo-700 text-white px-8 py-4 text-2xl rounded-md font-semibold"
+        >
+          Search
+        </button>
+      </div>
+      
+    </main>
+    <div class="bg-white w-full h-[2px]"></div>
+    <section class="bg-gradient-to-r from-sky-500 to-indigo-500 h-screen">
+      <div class="w-3/4 m-auto py-16">
+        <h1 class="text-4xl my-4 font-semibold text-white">
+          Latest Programming Books
+        </h1>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
