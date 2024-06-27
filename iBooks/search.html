@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iBook | Find Programming Books</title>
+    <title>iBooks - Search</title>
     <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- css -->
@@ -11,51 +11,51 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="bg-gradient-to-r from-sky-500 to-indigo-500 h-screen p-2">
-      <form action="/search.html" class="md:w-3/4 w-full m-auto flex flex-col items-center h-full pt-20">
+    <main class="bg-gradient-to-r from-sky-500 to-indigo-500 py-8 px-3">
+      <form
+        action="/search.html"
+        class="md:w-3/4 w-full m-auto flex flex-col items-center h-full"
+      >
         <a
           href="/"
-          class="text-4xl font-semibold bg-indigo-500 px-5 py-4 text-white w-fit rounded-md"
+          class="text-2xl font-semibold bg-indigo-500 px-4 py-3 text-white w-fit rounded-md"
           >iBook</a
         >
-        <h1 class="md:text-5xl text-3xl text-center my-10 font-semibold text-white">
-          Learn Programming By Reading Books
+        <h1 class="text-center md:text-4xl text-3xl my-8 font-semibold text-white">
+          Find Programming Books
         </h1>
         <div class="w-full flex justify-center">
           <input
             type="text"
-            class="text-2xl md:px-5 py-3 px-3 rounded-md md:w-3/4 w-full"
-            placeholder="Search book..."
+            class="text-xl px-4 py-2 rounded-md md:w-2/4 w-full"
+            placeholder="search book..."
             name="search-term"
             required
           />
         </div>
         <button
-          class="mt-5 bg-indigo-700 text-white px-8 py-4 text-2xl rounded-md font-semibold"
+          class="mt-5 bg-indigo-700 text-white px-5 py-2 text-xl rounded-md font-semibold"
         >
           Search
         </button>
       </form>
     </main>
-    <div class="bg-white w-full h-[2px]"></div>
-
-    <!-- New Realese Book -->
-    <section id="newRelese" class="bg-gradient-to-r from-sky-500 to-indigo-500">
-      <div class="w-3/4 m-auto py-16">
-        
-          <h1 class="md:text-4xl text-2xl my-4 font-semibold text-white">
-          Latest Programming Books
-        </h1>
-       
-        <div
-          id="newBooks"
-          class="flex mt-14 gap-5 flex-wrap justify-between items-center"
-        ></div>
+    <section>
+      <div class="md:w-3/4 w-full px-5 m-auto py-8">
+        <div id="searchTerm">
+          
+        </div>
+         <div
+          id="searchBooks"
+          class="flex mt-14 gap-5 flex-wrap md:justify-between justify-center items-center "
+        >
+    </div>
+    <div id="pagination" class="mt-14 ">
+     
+    </div>
       </div>
     </section>
-
-    <!-- Spinner -->
-    <div class="spinner">
+  <div class="spinner">
       <div class="pl">
         <div class="pl__chip"></div>
         <div class="pl__chip"></div>
