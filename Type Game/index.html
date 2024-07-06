@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google FOnt -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex items-center justify-center h-screen">
+    <!-- Game area -->
+    <div
+      id="game-area"
+      class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+    >
+      <h1 class="text-4xl font-bold text-center mb-6 text-green-800 header">
+        Typing Master
+      </h1>
+      <div class="mb-4">
+        <input
+          id="player-name"
+          type="text"
+          class="w-full p-4 border-2 border-yellow-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="mb-4">
+        <div class="mb-4 p-4 bg-yellow-100 rounded shadow-inner">
+          <p id="text-display" class="text-lg text-gray-700">
+            The quick brown fox jumps over the lazy dog.
+          </p>
+        </div>
+        <input
+          id="text-input"
+          class="w-full p-4 border-2 border-yellow-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 opacity-75"
+          placeholder="Type The sentence and Enter"
+        />
+      </div>
+      <div class="flex justify-between items-center mb-4 text-yellow-700">
+        <div class="flex flex-col items-center">
+          <p class="font-bold text-lg">Time</p>
+          <p class="text-xl font-bold" id="time">60</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="font-bold text-lg">Errors</p>
+          <p class="text-xl font-bold" id="errors">0</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="font-bold text-lg">Word Count</p>
+          <p class="text-xl font-bold" id="wc">0</p>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <button
+          id="start-button"
+          class="w-full py-3 bg-green-600 text-white font-bold rounded btn"
+        >
+          Start Game
+        </button>
+        <button
+          id="reset-button"
+          class="w-full py-3 ml-4 bg-red-600 text-white font-bold rounded btn"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <!-- <canvas id="screenshot-canvas"></canvas> -->
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-green-800 mb-4">
+          Congratulations, <span id="player-name-display"></span>!
+        </h2>
+        <p class="text-lg text-gray-700 mb-4">
+          You completed the Typing Game with the following details:
+        </p>
+        <p class="text-lg text-gray-700 mb-2">
+          Words Typed:
+          <span id="words-typed" class="text-2xl font-bold text-green-800"
+            >0</span
+          >
+        </p>
+        <p class="text-lg text-gray-700 mb-2">
+          Mistakes Made:
+          <span id="mistakes-made" class="text-2xl font-bold text-red-600"
+            >0</span
+          >
+        </p>
+        <p class="text-lg text-gray-700 mb-4">
+          Final Score:
+          <span id="final-score" class="text-3xl font-bold text-green-800"
+            >0</span
+          >
+        </p>
+        <p class="text-sm text-gray-600 mb-4">
+          Keep practicing to improve your typing speed and accuracy!
+        </p>
+        <button
+          id="take-screenshot-popup"
+          class="px-6 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition duration-300"
+        >
+          Take Screenshot
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
