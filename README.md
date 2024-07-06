@@ -126,6 +126,3 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 Special thanks to all the contributors who have helped make this repository a valuable resource for learning JavaScript. Your contributions are greatly appreciated!
 
----
-
-Feel free to customize any part of this README to better fit your needs or preferences. Adding a banner image at the top and linking to detailed project descriptions can also enhance its visual appeal and usability.
