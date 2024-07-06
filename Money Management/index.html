@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100">
+
+
+      <header class="bg-blue-600 p-4 text-white text-center">
+        <h1 class="text-2xl font-bold">Money Management</h1>
+    </header>
+
+    <main class="p-4 md:w-3/4 w-full m-auto">
+        <!-- Overview Section -->
+        <section class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium">Total Income</h3>
+                    <p class="text-2xl font-bold text-green-600" id="income">00 BDT</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium">Total Expenses</h3>
+                    <p class="text-2xl font-bold text-red-600" id="expense">00 BDT</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium">Net Savings</h3>
+                    <p class="text-2xl font-bold text-blue-600" id="saving">00 BDT</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Transaction Section -->
+        <section class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Add Transaction</h2>
+            <form class="bg-white p-4 rounded-lg shadow-md" id="addMoney">
+                <div class="mb-4">
+                    <label for="transactionType" class="block text-sm font-medium text-gray-700">Transaction Type</label>
+                    <select id="transactionType" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label  for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                    <input required type="number" id="amount" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                    <input required type="text" id="description" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- Transaction History Section -->
+        <section>
+            <h2 class="text-xl font-semibold mb-2">Transaction History</h2>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="history">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 p-4 text-white text-center mt-6">
+        <p>&copy; 2024 Money Management. All rights reserved.</p>
+    </footer>
+ 
+</body>
+</html>
