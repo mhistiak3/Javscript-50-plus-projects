@@ -115,7 +115,6 @@ For detailed contribution guidelines, check out our [CONTRIBUTING.md](CONTRIBUTI
 To complement your learning journey, here are some recommended resources:
 
 - [JavaScript.info](https://javascript.info/)
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
 
