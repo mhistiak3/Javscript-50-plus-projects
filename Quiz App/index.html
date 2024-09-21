@@ -10,90 +10,80 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div id="quiz-app" class="bg-dark w-100 text-light position-relative">
-      <div class="position-absolute d-none" id="modal">
-        <div class="card p-3">
-          <div class="row gy-3" id="modalContent"></div>
-          <div>
-            <a class="btn btn-primary" href="/">Start Quiz Again</a>
+  <body class="bg-dark text-light">
+    <div id="quiz-app" class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
+      <div class="container">
+        <h1 class="fw-bold text-center mb-5">Test Your HTML, CSS, JavaScript Knowledge</h1>
+        
+        <!-- Quiz Cards -->
+        <div class="row gy-4" id="quizs">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="card-title">HTML Quiz</h3>
+                <p class="card-text text-muted">10 Questions</p>
+                <button
+                  class="btn btn-outline-primary w-100"
+                  id="startBtn"
+                  onclick="startQuiz(0)"
+                >
+                  Start Quiz
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="card-title">CSS Quiz</h3>
+                <p class="card-text text-muted">10 Questions</p>
+                <button
+                  class="btn btn-outline-success w-100"
+                  id="startBtn"
+                  onclick="startQuiz(1)"
+                >
+                  Start Quiz
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="card-title">JS Quiz</h3>
+                <p class="card-text text-muted">10 Questions</p>
+                <button
+                  class="btn btn-outline-warning w-100"
+                  id="startBtn"
+                  onclick="startQuiz(2)"
+                >
+                  Start Quiz
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container py-5">
-        <h1 class="fw-medium text-center">
-          Test your HTMl, CSS, Javacsript Knowledge
-        </h1>
-        <div class="row my-5 gy-4" id="quizs">
-          <div class="col-12">
-            <div class="card py-3 px-4">
-              <div class="row">
-                <div class="col-4">
-                  <h3>HTML Quiz</h3>
-                </div>
-                <div class="col-4">
-                  <button
-                    class="btn btn-dark"
-                    id="startBtn"
-                    onclick="startQuiz(0)"
-                  >
-                    Start Quiz
-                  </button>
-                </div>
-                <div class="col-4">
-                  <h5 class="text-end">10 Questions</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="card py-3 px-4">
-              <div class="row">
-                <div class="col-4">
-                  <h3>CSS Quiz</h3>
-                </div>
-                <div class="col-4">
-                  <button
-                    class="btn btn-dark"
-                    id="startBtn"
-                    onclick="startQuiz(1)"
-                  >
-                    Start Quiz
-                  </button>
-                </div>
-                <div class="col-4">
-                  <h5 class="text-end">10 Questions</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="card py-3 px-4">
-              <div class="row">
-                <div class="col-4">
-                  <h3>Javscript Quiz</h3>
-                </div>
-                <div class="col-4">
-                  <button
-                    class="btn btn-dark"
-                    id="startBtn"
-                    onclick="startQuiz(2)"
-                  >
-                    Start Quiz
-                  </button>
-                </div>
-                <div class="col-4">
-                  <h5 class="text-end">10 Questions</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 py-5"></div>
-        </div>
-        <div class="d-flex justify-content-center d-none mb-5" id="showBtn">
-          <button class="btn btn-light" id="nextBtn" disabled="false">
+
+        <!-- Next Button -->
+        <div class="d-flex justify-content-center mt-5 d-none" id="showBtn">
+          <button class="btn btn-primary btn-lg" id="nextBtn" disabled="false">
             Next Question
           </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="position-fixed top-50 start-50 translate-middle w-100 h-100 bg-dark bg-opacity-50 d-none" id="modal">
+          <div class="card mx-auto p-4 shadow-lg" style="max-width: 600px;">
+            <div class="card-body">
+              <h5 class="card-title text-center">Quiz Completed!</h5>
+              <div class="row gy-3" id="modalContent"></div>
+              <div class="d-grid">
+                <a class="btn btn-success my-3" href="/">Start Quiz Again</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

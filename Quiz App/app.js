@@ -36,39 +36,30 @@ function selectedQuiz({ topic, questions }) {
 
   let { question, choices } = questions[quizNumber];
 
-  quizsContent.innerHTML = ` <div class="card mt-4 p-4">
-  <div class='mb-2'><span class='bg-success p-1 rounded-1 text-white'>${topic}</span></div>
-          <h3>${escapeHTML(question)}</h3>
-          <div class="row gy-3 mt-2">
-            <div class="col-12">
-             <div class="bg-dark text-white p-2 px-3 rounded-2">
-             <label> <input type="radio" class="me-2 form-check-input" name="${topic}-${quizNumber}" onchange="quizOptionChange(${quizNumber},0)">
-               <span>${escapeHTML(choices[0])}</span></label>
-             </div>
-            </div>
-            <div class="col-12">
-             <div class="bg-dark text-white p-2 px-3 rounded-2">
-              <label>
-              <input type="radio" class="me-2 form-check-input" name="${topic}-${quizNumber}" onchange="quizOptionChange(${quizNumber},1)">
-               <span>${escapeHTML(choices[1])}</span> </label>
-             </div>
-            </div>
-            <div class="col-12">
-             <div class="bg-dark text-white p-2 px-3 rounded-2">
-              <label>
-              <input type="radio" class="me-2 form-check-input" name="${topic}-${quizNumber}" onchange="quizOptionChange(${quizNumber},2)">
-               <span>${escapeHTML(choices[2])}</span> </label>
-             </div>
-            </div>
-            <div class="col-12">
-             <div class="bg-dark text-white p-2 px-3 rounded-2"> <label>
-              <input type="radio" class="me-2 form-check-input" name="${topic}-${quizNumber}" onchange="quizOptionChange(${quizNumber},3)">
-               <span>${escapeHTML(choices[3])}</span> </label>
-             </div>
-            </div>
-          
+  quizsContent.innerHTML = `
+  <div class="card mt-4 p-4 shadow-lg border-0 rounded-3 bg-light">
+    <div class='mb-3'>
+      <span class='badge bg-success text-uppercase fw-bold p-2'>${topic}</span>
+    </div>
+    <h3 class="text-primary fw-bold">${escapeHTML(question)}</h3>
+    <div class="row gy-3 mt-4">
+      ${choices
+        .map(
+          (choice, index) => `
+        <div class="col-12">
+          <div class="option bg-white p-3 border rounded-3 shadow-sm d-flex align-items-center">
+            <label class="w-100 d-flex align-items-center">
+              <input type="radio" class="me-3 form-check-input" name="${topic}-${quizNumber}" onchange="quizOptionChange(${quizNumber},${index})">
+              <span class="fw-normal text-dark">${escapeHTML(choice)}</span>
+            </label>
           </div>
-        </div>`;
+        </div>
+      `
+        )
+        .join("")}
+    </div>
+  </div>
+`;
 }
 
 // Change Quiz Function
@@ -107,20 +98,35 @@ function showModal() {
   let htmlContent = "";
   htmlContent += rightWrongOption
     .map((option) => {
-      return `<div class="col-12">
-              <div class="mb-2">
-                <span class="bg-dark text-white rounded-1 p-1">${
-                  datas[option.type].topic
-                } Question-${option.number + 1}:</span>
-              </div>
-              <h5>Your Answare: ${escapeHTML(option.user)}</h5>
-              <h5>Correct Answare: ${escapeHTML(option.correct)}</h5>
-              <button class="btn btn-${
-                option.isCorrect ? "success" : "danger"
-              }">Your answare is 
-              ${option.isCorrect ? "Correct" : "Wrong"}</button>
-              <hr>
-            </div>`;
+      return `
+        <div class="col-12 p-3 mb-4 shadow-sm rounded-3 bg-light">
+          <div class="mb-3">
+            <span class="badge bg-secondary text-uppercase px-2 py-1">${
+              datas[option.type].topic
+            } Question-${option.number + 1}:</span>
+          </div>
+          <div class="answers">
+            <div class="user-answer p-3 rounded-2 mb-2 ${
+              option.isCorrect
+                ? "bg-success text-white"
+                : "bg-danger text-white"
+            }">
+              <strong>Your Answer: </strong> ${escapeHTML(option.user)}
+            </div>
+${
+  option.isCorrect ? (
+    ""
+  ) : (
+   ` <div class="correct-answer p-3 rounded-2 mb-2 bg-info text-dark">
+      <strong>Correct Answer: </strong> ${escapeHTML(option.correct)}
+    </div>`
+  )
+}
+            
+
+          </div>
+         
+        </div>`;
     })
     .join("");
   modalContent.innerHTML = htmlContent;
