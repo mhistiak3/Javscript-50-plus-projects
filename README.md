@@ -115,7 +115,6 @@ For detailed contribution guidelines, check out our [CONTRIBUTING.md](CONTRIBUTI
 To complement your learning journey, here are some recommended resources:
 
 - [JavaScript.info](https://javascript.info/)
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
 
@@ -127,6 +126,3 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 Special thanks to all the contributors who have helped make this repository a valuable resource for learning JavaScript. Your contributions are greatly appreciated!
 
----
-
-Feel free to customize any part of this README to better fit your needs or preferences. Adding a banner image at the top and linking to detailed project descriptions can also enhance its visual appeal and usability.
